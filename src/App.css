@@ -1,0 +1,198 @@
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url("https://w.wallhaven.cc/full/eo/wallhaven-eolejr.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.App-header {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+}
+
+.SearchComponent {
+    width: 700px;
+    height: 390px;
+    background-color: white;
+    background-color: rgb(68, 67, 100);
+
+    margin: auto;
+    margin-top: 50px;
+    color: white;
+
+    box-shadow: 5px 5px 7px 1px rgba(0, 0, 0, 0.43);
+    opacity: .98;
+}
+
+.SearchComponent-input-field {
+    width: 471px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.SearchComponent-radioButtons {
+    display:flex;
+    width: 140px;
+    margin: auto;
+}
+
+.SearchComponent-radioButtons * {
+    flex: 1;
+}
+
+.SearchComponent-result {
+    width: 90%;
+    height: 70%;
+
+    margin:auto;
+
+    text-align: left;
+    margin-top: 30px;
+}
+
+.loading-gif {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    left: calc(50% - 75px);
+
+    top: calc(50% - 75px);
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.SearchComponent-result-playerName {
+    margin-bottom: 10px;
+    text-align: center;
+    
+    margin-top: 21px;
+    font-size: 2em;
+    margin-left: 10px;
+}
+
+.rating-item {
+    display:flex;
+    position: relative;
+    height: 60px;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    animation: fadein 1.5s;
+}
+
+.rating-text {
+    display: flex;
+    font-weight: bolder;
+    font-size: 30px;
+    padding-top: 12px;
+    padding-left: 12px;
+}
+
+.rating-level {
+    margin-left: 10px;
+}
+
+.role-icon-div {
+    margin-right: 15px;
+}
+
+.rank-images {
+    position: absolute;
+    height: 80%;
+    right: 10px;
+    margin-top: 5px;
+}
+
+.role-images {
+    width: 30px;
+}
+
+.playerHeader {
+    display: flex;
+    margin-bottom: 10px;
+    background-color: #b292d957;
+}
+
+.playerIcon {
+    width: 80px;
+}
+
+.instructionText {
+    position: relative;
+    text-align: center;
+    top: 15px;
+    font-size: 1.5em;
+}
+
+.SearchComponent-radiobuttons-div {
+    display:flex;
+    top: 5px;
+    position: relative;
+}
+
+.SearchComponent-radioButtons-platform {
+    margin-right: 20px;
+}
+
+.SearchComponent-margindiv {
+    position: relative;
+    top: 15px;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+  /* box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.43); */
+}
+
+.searchTerm {
+  width: 100%;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  outline: none;
+  color: #9DBFAF;
+  border: 0px solid #00B4CC;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  height: 30px;
+  border: 0px solid #00B4CC;
+}
+
+.searchButton:hover {
+    background-color: rgba(0, 180, 204, 0.61);
+    transition: .5s;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  transform: translate(-50%, -50%);
+}
