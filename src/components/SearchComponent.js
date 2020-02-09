@@ -19,7 +19,6 @@ class SearchComponent extends React.Component {
         super(props);
         this.state = {
             inputString: "",
-            region: "",
             isLoading: false,
             firstSearch: true,
             playerFound: false,
@@ -30,14 +29,6 @@ class SearchComponent extends React.Component {
 
     InputChangeHandler = event => {
         this.inputString = event.target.value
-    }
-
-    regionChange = event => {
-        this.setState({
-            region: event.currentTarget.value
-        });
-
-        console.log(this.state)
     }
     
     OnClickHandler = event => {
@@ -56,7 +47,7 @@ class SearchComponent extends React.Component {
         })
 
         
-        fetch("https://ow-api.com/v1/stats/pc/" + this.state.region + "/" + this.inputString.replace("#", "-") + "/profile")
+        fetch("https://ow-api.com/v1/stats/pc/" + "/" + this.inputString.replace("#", "-") + "/profile")
             .then(res => res.json())
             .then(res => {
 
@@ -150,7 +141,6 @@ class SearchComponent extends React.Component {
             let ratingList = []
             if(this.state.playerData.ratings !== null && !this.state.isLoading && this.state.playerData.ratings !== undefined) {
 
-
                     this.state.playerData.ratings.map((rating) => {
 
                         ratingList.push(
@@ -219,23 +209,6 @@ class SearchComponent extends React.Component {
                                 <button type="submit" className="searchButton">
                                     <i className="fa fa-search"></i>
                                 </button>
-                            </div>
-                        </div>
-
-                        <div className="SearchComponent-radiobuttons-div">
-                            <div className="SearchComponent-radioButtons-region">
-                                    
-                                <input type="radio"
-                                    value="us"
-                                    checked={this.state.region === "us"}
-                                    onChange={this.regionChange} />US
-
-                                    <input type="radio"
-                                    value="eu"
-                                    checked={this.state.region === "eu"}
-                                    onChange={this.regionChange} />EU
-                            
-
                             </div>
                         </div>
 
